@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paris – Josie's Food Map</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="nav-brand">Josie's Food Map</a>
+            <ul class="nav-links">
+                <li><a href="hongkong.html">Hong Kong</a></li>
+                <li><a href="paris.html" class="active" aria-current="page">Paris</a></li>
+                <li><a href="newyork.html">New York</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <section class="city-hero">
+            <div class="city-hero-content">
+                <div class="city-hero-text">
+                    <h1 class="city-name">Paris</h1>
+                    <p class="place-count" id="place-count">10 places in total</p>
+                    <a href="#restaurants" class="anchor-link">↓ View restaurants</a>
+                </div>
+                <figure class="city-hero-photo">
+                    <img
+                        src="images/foodparis.JPG"
+                        srcset="images/foodparis.JPG 1x, images/foodparis@2x.JPG 2x"
+                        width="550"
+                        height="344"
+                        alt="Food photo from Paris">
+                </figure>
+            </div>
+        </section>
+
+        <section id="restaurants" class="city-content">
+
+            <aside class="filter-sidebar" aria-label="Filter restaurants by category">
+                <h2 class="filter-title">Filter</h2>
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="restaurant">Restaurant</button>
+                <button class="filter-btn" data-category="cafe">Cafe</button>
+                <button class="filter-btn" data-category="bakery">Bakery</button>
+                <button class="filter-btn" data-category="ice-cream">Ice Cream</button>
+                <button class="filter-btn" data-category="others">Others</button>
+            </aside>
+
+            <div class="cards-grid" id="cards-grid">
+
+                <article class="restaurant-card" data-category="bakery">
+                    <div class="card-header">
+                        <span class="card-cuisine">French Bakery</span>
+                        <span class="card-rating" aria-label="5 out of 5 stars">★★★★★</span>
+                    </div>
+                    <h3 class="card-name">Carré Pain de Mie</h3>
+                    <p class="card-dishes">Try: Carré (Japenese style toast)</p>
+                    <a href="https://www.google.com/maps/place/Carr%C3%A9+Pain+de+Mie/data=!4m2!3m1!1s0x47e66e034c715555:0x1f4b795d6feba5ea"
+                       class="card-maps" target="_blank" rel="noopener noreferrer">See Maps →</a>
+                </article>
+
+                <article class="restaurant-card" data-category="ice-cream">
+                    <div class="card-header">
+                        <span class="card-cuisine">Gelato &amp; Sorbet</span>
+                        <span class="card-rating" aria-label="5 out of 5 stars">★★★★★</span>
+                    </div>
+                    <h3 class="card-name">Folderol</h3>
+                    <p class="card-dishes">Try: Sorbet prune lovita and cornbread gelato</p>
+                    <a href="https://www.google.com/maps/place/Folderol/data=!4m2!3m1!1s0x47e66ddfa0c546ef:0xe6a004bab87eb43a"
+                       class="card-maps" target="_blank" rel="noopener noreferrer">See Maps →</a>
+                </article>
+
+                <article class="restaurant-card" data-category="restaurant">
+                    <div class="card-header">
+                        <span class="card-cuisine">Thai Bistro</span>
+                        <span class="card-rating" aria-label="5 out of 5 stars">★★★★★</span>
+                    </div>
+                    <h3 class="card-name">CHANTIRA</h3>
+                    <p class="card-dishes">Try: Any small plate. Everything is great!</p>
+                    <a href="https://www.google.com/maps/place/CHANTIRA/data=!4m2!3m1!1s0x47e6715e33f69757:0x9469077d8920d9b1"
+                       class="card-maps" target="_blank" rel="noopener noreferrer">See Maps →</a>
+                </article>
+
+                <article class="restaurant-card" data-category="restaurant">
+                    <div class="card-header">
+                        <span class="card-cuisine">Japanese</span>
+                        <span class="card-rating" aria-label="5 out of 5 stars">★★★★★</span>
+                    </div>
+                    <h3 class="card-name">SUMiBi KAZ</h3>
+                    <p class="card-dishes">Try: Unadon</p>
+                    <a href="https://www.google.com/maps/place/SUMiBi+KAZ/data=!4m2!3m1!1s0x47e66e3e46900cbb:0x8cdd40ee96c78d2a"
+                       class="card-maps" target="_blank" rel="noopener noreferrer">See Maps →</a>
+                </article>
+
+                <article class="restaurant-card" data-category="bakery">
+                    <div class="card-header">
+                        <span class="card-cuisine">Chinese</span>
+                        <span class="card-rating" aria-label="5 out of 5 stars">★★★★★</span>
+                    </div>
+                    <h3 class="card-name">Sucrepice</h3>
+                    <p class="card-dishes">Try: All the adds-on for the noodle are fantastic!</p>
+                    <a href="https://www.google.com/maps/place/Sucrepice/data=!4m2!3m1!1s0x47e671e5a3c1f067:0x29cacc6b68461f5d"
+                       class="card-maps" target="_blank" rel="noopener noreferrer">See Maps →</a>
+                </article>
+
+                <article class="restaurant-card" data-category="restaurant">
+                    <div class="card-header">
+                        <span class="card-cuisine">French-Korean</span>
+                        <span class="card-rating" aria-label="4 out of 5 stars">★★★★☆</span>
+                    </div>
+                    <h3 class="card-name">jip.paris</h3>
+                    <p class="card-dishes">Try: shrimp toast and the noodle</p>
+                    <a href="https://www.google.com/maps/place/jip.paris/data=!4m2!3m1!1s0x47e66d000ffd97a1:0xbee0cf32d71db7b1"
+                       class="card-maps" target="_blank" rel="noopener noreferrer">See Maps →</a>
+                </article>
+
+                <article class="restaurant-card" data-category="restaurant">
+                    <div class="card-header">
+                        <span class="card-cuisine">French Bistro</span>
+                        <span class="card-rating" aria-label="5 out of 5 stars">★★★★★</span>
+                    </div>
+                    <h3 class="card-name">Restaurant Au Passage</h3>
+                    <p class="card-dishes">Try: All is good!</p>
+                    <a href="https://www.google.com/maps/place/RESTAURANT+AU+PASSAGE/data=!4m2!3m1!1s0x47e66dfde8fef7db:0xcb752e8052dc0fd9"
+                       class="card-maps" target="_blank" rel="noopener noreferrer">See Maps →</a>
+                </article>
+
+                <article class="restaurant-card" data-category="restaurant">
+                    <div class="card-header">
+                        <span class="card-cuisine">French Home Cooking</span>
+                        <span class="card-rating" aria-label="4 out of 5 stars">★★★★☆</span>
+                    </div>
+                    <h3 class="card-name">La Jacobine</h3>
+                    <p class="card-dishes">Try: Onion soup and red wine beef</p>
+                    <a href="https://www.google.com/maps/place/La+Jacobine/data=!4m2!3m1!1s0x47e671ded4176171:0x274e05037fc4d75b"
+                       class="card-maps" target="_blank" rel="noopener noreferrer">See Maps →</a>
+                </article>
+
+                <article class="restaurant-card" data-category="restaurant">
+                    <div class="card-header">
+                        <span class="card-cuisine">Modern French</span>
+                        <span class="card-rating" aria-label="4 out of 5 stars">★★★★☆</span>
+                    </div>
+                    <h3 class="card-name">Les Cocottes</h3>
+                    <p class="card-dishes">Try: Squid ink risotto and panna cotta</p>
+                    <a href="https://www.google.com/maps/place/Les+Cocottes/data=!4m2!3m1!1s0x47e66fdf98609253:0x9ba9899504fd773c"
+                       class="card-maps" target="_blank" rel="noopener noreferrer">See Maps →</a>
+                </article>
+
+                <article class="restaurant-card" data-category="bakery">
+                    <div class="card-header">
+                        <span class="card-cuisine">Boulangerie</span>
+                        <span class="card-rating" aria-label="5 out of 5 stars">★★★★★</span>
+                    </div>
+                    <h3 class="card-name">Gonflé</h3>
+                    <p class="card-dishes">Try: Sesame Butter Croissant</p>
+                    <a href="https://www.google.com/maps/place/Gonfl%C3%A9/data=!4m2!3m1!1s0x47e66fedfba0b809:0x2df35271181c3c71"
+                       class="card-maps" target="_blank" rel="noopener noreferrer">See Maps →</a>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Josie's Food Map &mdash; <a href="index.html" class="anchor-link">← Back to Home</a> &ensp;·&ensp; <a href="#main-content" class="anchor-link">↑ Back to top</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

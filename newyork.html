@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New York – Josie's Food Map</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="nav-brand">Josie's Food Map</a>
+            <ul class="nav-links">
+                <li><a href="hongkong.html">Hong Kong</a></li>
+                <li><a href="paris.html">Paris</a></li>
+                <li><a href="newyork.html" class="active" aria-current="page">New York</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <section class="city-hero">
+            <div class="city-hero-content">
+                <div class="city-hero-text">
+                    <h1 class="city-name">New York</h1>
+                    <p class="place-count" id="place-count">10 places in total</p>
+                    <a href="#restaurants" class="anchor-link">↓ View restaurants</a>
+                </div>
+                <figure class="city-hero-photo">
+                    <img
+                        src="images/foodny.JPG"
+                        srcset="images/foodny.JPG 1x, images/foodny@2x.JPG 2x"
+                        width="550"
+                        height="344"
+                        alt="Food photo from New York">
+                </figure>
+            </div>
+        </section>
+
+        <section id="restaurants" class="city-content">
+
+            <aside class="filter-sidebar" aria-label="Filter restaurants by category">
+                <h2 class="filter-title">Filter</h2>
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="restaurant">Restaurant</button>
+                <button class="filter-btn" data-category="cafe">Cafe</button>
+                <button class="filter-btn" data-category="bakery">Bakery</button>
+                <button class="filter-btn" data-category="ice-cream">Ice Cream</button>
+                <button class="filter-btn" data-category="others">Others</button>
+            </aside>
+
+            <div class="cards-grid" id="cards-grid">
+
+                <article class="restaurant-card" data-category="ice-cream">
+                    <div class="card-header">
+                        <span class="card-cuisine">Ice Cream</span>
+                        <span class="card-rating" aria-label="5 out of 5 stars">★★★★★</span>
+                    </div>
+                    <h3 class="card-name">Morgenstern's Finest Ice Cream</h3>
+                    <p class="card-dishes">Try: HK milk tea and pineapple egg yolk</p>
+                    <a href="https://www.google.com/maps/place/Morgenstern's+Finest+Ice+Cream/data=!4m2!3m1!1s0x89c259007daa42e1:0xd3df9f6ab24b0317"
+                       class="card-maps" target="_blank" rel="noopener noreferrer">See Maps →</a>
+                </article>
+
+                <article class="restaurant-card" data-category="bakery">
+                    <div class="card-header">
+                        <span class="card-cuisine">Bagels</span>
+                        <span class="card-rating" aria-label="5 out of 5 stars">★★★★★</span>
+                    </div>
+                    <h3 class="card-name">Leon's Bagels</h3>
+                    <p class="card-dishes">Try: BEC with scallion cc on everything bagel</p>
+                    <a href="https://www.google.com/maps/place/Leon%E2%80%99s+Bagels/data=!4m2!3m1!1s0x89c25946f1840529:0xe41fa101da775050"
+                       class="card-maps" target="_blank" rel="noopener noreferrer">See Maps →</a>
+                </article>
+
+                <article class="restaurant-card" data-category="cafe">
+                    <div class="card-header">
+                        <span class="card-cuisine">Bubble Tea</span>
+                        <span class="card-rating" aria-label="5 out of 5 stars">★★★★★</span>
+                    </div>
+                    <h3 class="card-name">Sweetea</h3>
+                    <p class="card-dishes">Try: Taro mochi cheese foam</p>
+                    <a href="https://www.google.com/maps/place/Sweetea/data=!4m2!3m1!1s0x89c2595bca10c73f:0x8cab228bf66b583"
+                       class="card-maps" target="_blank" rel="noopener noreferrer">See Maps →</a>
+                </article>
+
+                <article class="restaurant-card" data-category="restaurant">
+                    <div class="card-header">
+                        <span class="card-cuisine">Modern Korean</span>
+                        <span class="card-rating" aria-label="5 out of 5 stars">★★★★★</span>
+                    </div>
+                    <h3 class="card-name">Oiji Mi</h3>
+                    <p class="card-dishes">Try: Uni rice and lobster noodle</p>
+                    <a href="https://www.google.com/maps/place/Oiji+Mi/data=!4m2!3m1!1s0x89c259664d15ed79:0x5c9ea8800269810d"
+                       class="card-maps" target="_blank" rel="noopener noreferrer">See Maps →</a>
+                </article>
+
+                <article class="restaurant-card" data-category="others">
+                    <div class="card-header">
+                        <span class="card-cuisine">Froyo &amp; Desserts</span>
+                        <span class="card-rating" aria-label="5 out of 5 stars">★★★★★</span>
+                    </div>
+                    <h3 class="card-name">Madison fare</h3>
+                    <p class="card-dishes">Try: Pistachio Knafeh Froyo</p>
+                    <a href="https://www.google.com/maps/place/Madison+fare/data=!4m2!3m1!1s0x89c2597865f90889:0xf319b18271545167"
+                       class="card-maps" target="_blank" rel="noopener noreferrer">See Maps →</a>
+                </article>
+
+                <article class="restaurant-card" data-category="restaurant">
+                    <div class="card-header">
+                        <span class="card-cuisine">Portuguese</span>
+                        <span class="card-rating" aria-label="4 out of 5 stars">★★★★☆</span>
+                    </div>
+                    <h3 class="card-name">Leitao</h3>
+                    <p class="card-dishes">Try: Grilled octopus</p>
+                    <a href="https://www.google.com/maps/place/Leitao/data=!4m2!3m1!1s0x89c25994ca6f25fb:0xd6736dd24abe791b"
+                       class="card-maps" target="_blank" rel="noopener noreferrer">See Maps →</a>
+                </article>
+
+                <article class="restaurant-card" data-category="restaurant">
+                    <div class="card-header">
+                        <span class="card-cuisine">Korean Fusion</span>
+                        <span class="card-rating" aria-label="4 out of 5 stars">★★★★☆</span>
+                    </div>
+                    <h3 class="card-name">Thursday Kitchen</h3>
+                    <p class="card-dishes">Try: steak and shrimp paella</p>
+                    <a href="https://www.google.com/maps/place/Thursday+Kitchen/data=!4m2!3m1!1s0x89c2599d70622157:0x6cbda8e9803282da"
+                       class="card-maps" target="_blank" rel="noopener noreferrer">See Maps →</a>
+                </article>
+
+                <article class="restaurant-card" data-category="bakery">
+                    <div class="card-header">
+                        <span class="card-cuisine">Bagels</span>
+                        <span class="card-rating" aria-label="5 out of 5 stars">★★★★★</span>
+                    </div>
+                    <h3 class="card-name">Apollo Bagels</h3>
+                    <p class="card-dishes">Try: Tomato and cc on sesame bagel</p>
+                    <a href="https://www.google.com/maps/place/Apollo+Bagels/data=!4m2!3m1!1s0x89c259006b5f41ef:0x87200d2c9acee1d0"
+                       class="card-maps" target="_blank" rel="noopener noreferrer">See Maps →</a>
+                </article>
+
+                <article class="restaurant-card" data-category="restaurant">
+                    <div class="card-header">
+                        <span class="card-cuisine">Italian Sandwiches</span>
+                        <span class="card-rating" aria-label="5 out of 5 stars">★★★★★</span>
+                    </div>
+                    <h3 class="card-name">All'Antico Vinaio</h3>
+                    <p class="card-dishes">Try: Paradiso (Schiacciata sandwich)</p>
+                    <a href="https://www.google.com/maps/place/All'Antico+Vinaio/data=!4m2!3m1!1s0x89c259d4955cac01:0x58f4b4fcad58588f"
+                       class="card-maps" target="_blank" rel="noopener noreferrer">See Maps →</a>
+                </article>
+
+                <article class="restaurant-card" data-category="ice-cream">
+                    <div class="card-header">
+                        <span class="card-cuisine">Artisan Gelato</span>
+                        <span class="card-rating" aria-label="4 out of 5 stars">★★★★☆</span>
+                    </div>
+                    <h3 class="card-name">il laboratorio del gelato</h3>
+                    <p class="card-dishes">Try: Unique Seasonal Flavors</p>
+                    <a href="https://www.google.com/maps/place/il+laboratorio+del+gelato/data=!4m2!3m1!1s0x89c2598722ae28eb:0x5c4a711e46a801a0"
+                       class="card-maps" target="_blank" rel="noopener noreferrer">See Maps →</a>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Josie's Food Map &mdash; <a href="index.html" class="anchor-link">← Back to Home</a> &ensp;·&ensp; <a href="#main-content" class="anchor-link">↑ Back to top</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

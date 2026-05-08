@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josie's Food Map</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="nav-brand">Josie's Food Map</a>
+            <ul class="nav-links">
+                <li><a href="hongkong.html">Hong Kong</a></li>
+                <li><a href="paris.html">Paris</a></li>
+                <li><a href="newyork.html">New York</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="site-title">Josie's Food Map</h1>
+                    <h2 class="hero-subtitle">Welcome to my personal food map.</h2>
+                    <a href="#cities" class="anchor-link">↓ Choose a city</a>
+                    <p class="hero-description">As a foodie, I'm always searching for hidden gems worth sharing. Here, I collect restaurants, cafes, desserts, and casual meals that I have tried and loved across different cities. This guide is here to save you from endless scrolling and help you find your next good bite.</p>
+                </div>
+                <div class="hero-video-wrap">
+                    <video
+                        controls
+                        width="280"
+                        height="400"
+                        aria-label="Introduction video about Josie's Food Map">
+                        <source src="media/intro.mp4" type="video/mp4">
+                        <p>Your browser does not support the video element.
+                           <a href="media/intro.mp4">Download the intro video</a>.
+                        </p>
+                    </video>
+                </div>
+            </div>
+        </section>
+        <p class="hero-cta">Choose a city and start exploring!</p>
+
+        <section id="cities" class="city-section" aria-label="Choose a city">
+            <div class="city-grid">
+                <div class="city-overall">
+                    <a href="hongkong.html" class="city-card">
+                        <figure>
+                            <img
+                                src="images/hongkong-map.png"
+                                srcset="images/hongkong-map.png 1x, images/hongkong-map@2x.png 2x"
+                                width="550" height="344"
+                                alt="Hongkong Food Map"
+                                class="city-card-img">
+                        </figure>
+                    </a>
+                    <p class="city-card-name">Hong Kong</p>
+                </div>
+
+                <div class="city-overall">
+                    <a href="paris.html" class="city-card">
+                        <figure>
+                            <img
+                                src="images/paris-map.png"
+                                srcset="images/paris-map.png 1x, images/paris-map@2x.png 2x"
+                                width="550" height="344"
+                                alt="Paris Food Map"
+                                class="city-card-img">
+                        </figure>
+                    </a>
+                    <p class="city-card-name">Paris</p>
+                </div>
+
+                <div class="city-overall">
+                    <a href="newyork.html" class="city-card">
+                        <figure>
+                            <img
+                                src="images/newyork-map.png"
+                                srcset="images/newyork-map.png 1x, images/newyork-map@2x.png 2x"
+                                width="550" height="344"
+                                alt="New York Food Map"
+                                class="city-card-img">
+                        </figure>
+                    </a>
+                    <p class="city-card-name">New York</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Josie's Food Map &mdash; A personal food guide by Josie <a href="#main-content" class="anchor-link">↑ Back to top</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,674 @@
+/* fonts */
+
+@font-face {
+    font-family: 'Amatica SC';
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: url('fonts/AmaticaSC-Bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Bradley Hand';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url('fonts/BradleyHand-Bold.woff2') format('woff2');
+}
+
+/* defined parameters */
+
+:root {
+    --bg:     #faf9f5;
+    --paper:  #fffdf8;
+    --muted:   #d89090;
+    --label: #a1b981;
+    --text:  #8a8178;
+    --line:   #d8d2c8;
+    --blue:   #9bbbd3;
+    --cream:  #f3eadc;
+
+    --accent:       #7a9aaf;
+    --accent-hover: #5e8099;
+    --star:         #f2b425;
+
+    --font-display: 'Amatica SC', 'Bradley Hand ITC', cursive;
+    --font-body:    'Bradley Hand', 'Bradley Hand ITC', cursive;
+
+    --nav-height:  58px;
+    --max-width:   1200px;
+    --gap:         1.6rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    color: var(--text);
+    background-color: var(--bg);
+    /* subtle dot-grid: notebook / graph-paper feel */
+    background-image: radial-gradient(circle, rgba(216, 210, 200, 0.55) 1px, transparent 1px);
+    background-size: 26px 26px;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+h1 {
+    font-family: var(--font-display);
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+h2 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h3 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+p {
+    font-family: var(--font-body);
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+/* links */
+
+a:link    { color: var(--accent); text-decoration: none; }
+a:visited { color: #6a8a9a; }
+a:hover   { color: var(--accent-hover); text-decoration: underline; }
+a:active  { color: var(--text); }
+
+/* header navigation */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--paper);
+    border-bottom: 1.5px dashed var(--line);
+}
+
+.navbar {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-brand {
+    font-family: var(--font-display);
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--text) !important;
+    text-decoration: none !important;
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+}
+.nav-brand:hover { color: var(--muted) !important; }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    color: var(--muted);
+    text-decoration: none;
+    padding-bottom: 3px;
+    border-bottom: 1.5px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+}
+.nav-links a:visited { color: var(--muted); }
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--blue);
+    border-bottom-color: var(--blue);
+    text-decoration: none;
+}
+
+
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2.5rem 2rem;
+}
+
+/* index page intro (flex)*/
+
+.hero {
+    padding: 3.5rem 0 3rem;
+}
+
+.hero-content {
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.hero-text { 
+    flex: 0 1 500px; 
+    text-align: center;}
+
+.site-title {
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+    color: var(--text);
+}
+
+.site-title::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 50%;
+    background: var(--star);
+    border-radius: 3px;
+    margin: 8px auto 0;
+    opacity: 0.6;
+}
+
+.hero-subtitle {
+    text-align: center;
+    font-family: var(--font-body);
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--muted);
+    margin-top: 3rem;
+}
+
+.hero-description {
+    text-align: center;
+    font-size: 1.2rem;
+    max-width: 500px;
+    margin: 2rem auto;
+    color: var(--text);
+    line-height: 1.8;
+}
+
+.hero-cta {
+    display: block;
+    width: fit-content;
+    margin: auto;
+    font-family: var(--font-body);
+    font-size: 1.5rem;
+    color: var(--blue);
+    border-bottom: 2px dashed var(--line);
+    padding-bottom: 2px;
+}
+
+/* video styled like a photo in a white sleeve */
+.hero-video-wrap {
+    flex: 0 0 320px;
+    transform: rotate(1.5deg);
+    filter: drop-shadow(4px 6px 16px rgba(0, 0, 0, 0.10));
+}
+
+.hero-video-wrap video {
+    width: 100%;
+    height: auto;
+    border-radius: 3px 8px 4px 6px / 6px 3px 7px 4px;
+    background: var(--cream);
+    border: 7px solid var(--paper);
+    outline: 1.5px solid var(--line);
+}
+
+/* index page city map button (grid)*/
+
+.city-section {
+    padding: 3rem 0 4rem;
+}
+
+.city-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.8rem;
+    align-items: start;
+}
+
+/* Polaroid photo card */
+.city-overall {
+    background: var(--paper);
+    padding: 8px 8px 0;
+    border: 1px solid var(--line);
+    box-shadow: 3px 5px 18px rgba(0, 0, 0, 0.08), 1px 1px 0 rgba(0, 0, 0, 0.03);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.city-overall:nth-child(1) { transform: rotate(-1.3deg); }
+.city-overall:nth-child(2) { transform: rotate(0.9deg); }
+.city-overall:nth-child(3) { transform: rotate(-0.5deg); }
+
+.city-overall:hover {
+    transform: rotate(0deg) translateY(-6px);
+    box-shadow: 5px 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.city-card {
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+}
+.city-card:hover { text-decoration: none; }
+
+.city-card-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.22s;
+}
+.city-card:hover .city-card-img { opacity: 0.90; }
+
+/* polaroid caption strip */
+.city-card-name {
+    font-family: var(--font-display);
+    font-size: 1.65rem;
+    color: var(--text);
+    text-align: center;
+    padding: 0.75rem 0.5rem 1rem;
+    letter-spacing: 0.03em;
+}
+
+/* city page intro */
+
+.city-hero {
+    padding: 1rem 0rem;
+    margin-bottom: 2.5rem;
+}
+
+.city-hero-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.city-hero-text {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.city-hero-photo {
+    flex: 0 0 540px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 0.5rem;
+    box-shadow: 3px 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+.city-hero-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.city-name {
+    font-size: 5.5rem;
+    line-height: 1;
+    margin-bottom: 0.15rem;
+    color: var(--text);
+    display: inline-block;
+    position: relative;
+}
+
+/* soft underline under city name */
+.city-name::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 80%;
+    background: var(--line);
+    border-radius: 3px;
+    margin: 8px auto 0;
+    opacity: 0.6;
+}
+
+.place-count {
+    font-size: 1rem;
+    color: var(--muted);
+}
+
+.anchor-link {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--muted);
+    border-bottom: 1px dashed var(--line);
+    display: inline-block;
+    padding-bottom: 1px;
+    text-decoration: none;
+    transition: color 0.18s, border-color 0.18s;
+}
+.anchor-link:hover {
+    color: var(--text);
+    border-bottom-color: var(--text);
+    text-decoration: none;
+}
+
+/* city page content */
+
+.city-content {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+/* city page filter bar (flex) */
+
+.filter-sidebar {
+    position: sticky;
+    top: calc(var(--nav-height) + 1.2rem);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.filter-title {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    margin-bottom: 0.2rem;
+}
+
+.filter-btn {
+    display: block;
+    width: 100%;
+    padding: 0.48rem 0.85rem;
+    background: var(--paper);
+    border: 1.5px solid var(--line);
+    border-radius: 20px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--muted);
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.18s, color 0.18s, border-color 0.18s;
+}
+.filter-btn:hover {
+    background: rgba(216, 210, 200, 0.28);
+    border-color: var(--line);
+    color: var(--text);
+}
+.filter-btn:focus-visible {
+    outline: 2px solid var(--text);
+    outline-offset: 2px;
+}
+.filter-btn.active {
+    background: var(--blue);
+    color: var(--paper);
+    border-color: var(--line);
+}
+
+/* restaurant card */
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    padding-top: 0.8rem;  /* room above tape strips */
+}
+
+
+.restaurant-card {
+    background: var(--paper);
+    border: 1.5px solid var(--line);
+    border-radius: 2px 8px 4px 6px / 6px 3px 7px 2px;
+    padding: 1.2rem 1.2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+    margin-top: 12px;  
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.055);
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+
+.restaurant-card:nth-child(3n+1) { transform: rotate(-0.7deg); }
+.restaurant-card:nth-child(3n+2) { transform: rotate( 0.5deg); }
+.restaurant-card:nth-child(3n)   { transform: rotate(-0.3deg); }
+
+.restaurant-card:hover {
+    transform: rotate(0deg) translateY(-5px);
+    box-shadow: 4px 9px 24px rgba(0, 0, 0, 0.10);
+}
+
+/* tape strip*/
+.restaurant-card::before {
+    content: '';
+    position: absolute;
+    top: -11px;
+    left: 50%;
+    width: 46px;
+    height: 16px;
+    border-radius: 2px;
+    z-index: 2;
+}
+
+.restaurant-card:nth-child(3n+1)::before {
+    transform: translateX(-50%) rotate(-2deg);
+    background: rgba(155, 187, 211, 0.52);
+    border: 1px solid rgba(155, 187, 211, 0.45);
+}
+.restaurant-card:nth-child(3n+2)::before {
+    transform: translateX(-50%) rotate(1.8deg);
+    background: rgba(201, 216, 182, 0.58);
+    border: 1px solid rgba(201, 216, 182, 0.50);
+}
+.restaurant-card:nth-child(3n)::before {
+    transform: translateX(-50%) rotate(-1.2deg);
+    background: rgba(232, 185, 184, 0.52);
+    border: 1px solid rgba(232, 185, 184, 0.45);
+}
+
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* cuisine tag */
+.card-cuisine {
+    font-family: var(--font-body);
+    font-size: 0.80rem;
+    padding: 0.15rem 0.6rem;
+    border-radius: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 62%;
+    background: rgba(216, 210, 200, 0.38);
+    color: var(--muted);
+}
+
+.card-rating {
+    font-size: 0.88rem;
+    color: var(--star);
+    letter-spacing: 0.03em;
+    flex-shrink: 0;
+}
+
+.card-name {
+    font-family: var(--font-display);
+    font-size: 1.45rem;
+    color: var(--text);
+    line-height: 1.15;
+}
+
+.card-dishes {
+    font-size: 0.96rem;
+    color: var(--label);
+    flex: 1;
+    font-style: italic;
+    line-height: 1.55;
+}
+
+.card-maps {
+    font-family: var(--font-body);
+    font-size: 0.84rem;
+    color: var(--muted);
+    align-self: flex-end;
+    text-decoration: none;
+    border-bottom: 1.5px dashed var(--line);
+    padding-bottom: 1px;
+    transition: color 0.18s, border-color 0.18s;
+}
+.card-maps:hover {
+    color: var(--text);
+    border-bottom-color: var(--text);
+    text-decoration: none;
+}
+.card-maps:visited { color: var(--muted); }
+
+/* footer */
+
+footer {
+    background: transparent;
+    border-top: 1.5px dashed var(--line);
+    padding: 2rem;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+footer p {
+    font-size: 0.95rem;
+    color: var(--muted);
+}
+
+footer a:link,
+footer a:visited { color: var(--muted); }
+footer a:hover   { color: var(--text); text-decoration: none; }
+
+/* responsive design */
+
+/* Tablet: 2-column card grid */
+@media (max-width: 1024px) {
+    .cards-grid  { grid-template-columns: repeat(2, 1fr); }
+    .city-grid   { grid-template-columns: repeat(2, 1fr); }
+    .hero-content { gap: 2.5rem; }
+    .hero-video-wrap { flex: 0 0 220px; }
+    .city-hero-photo { flex-basis: 360px; }
+}
+
+/* Mobile: single-column layout */
+@media (max-width: 768px) {
+    main { padding: 1rem; }
+
+    h1 { font-size: 2.8rem; }
+    h2 { font-size: 1.5rem; }
+
+    .navbar {
+        padding: 0 1rem;
+        flex-wrap: wrap;
+        height: auto;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        gap: 0.5rem;
+    }
+    .nav-links   { gap: 1.2rem; }
+    .nav-links a { font-size: 1rem; }
+
+    .hero        { padding: 1.5rem 0 1rem; }
+    .hero-content { 
+        flex-direction: column;
+        gap:1rem;  }
+    .hero-text {
+            flex: none;
+            width: 100%;
+        }
+    .hero-video-wrap {
+        flex: none;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 350px;
+        transform: rotate(0deg);
+        filter: none;
+    }
+    .site-title  { font-size: 3rem; }
+
+    /* city grid: 1 column; flatten rotations on small screen */
+    .city-grid   { grid-template-columns: 1fr; }
+    .city-overall { transform: rotate(0deg) !important; }
+
+    .city-name   { font-size: 3.5rem; }
+
+    .city-hero-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .city-hero-photo {
+        width: 100%;
+        max-width: 320px;
+        flex: none;
+    }
+
+    /* city content: 1 column */
+    .city-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* filter sidebar: horizontal scrollable row */
+    .filter-sidebar {
+        position: static;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+    }
+    .filter-btn {
+        width: auto;
+        flex: 0 0 auto;
+        padding: 0.35rem 0.75rem;
+        font-size: 0.95rem;
+    }
+
+    /* cards: 1 column; flatten card rotations */
+    .cards-grid { grid-template-columns: 1fr; }
+    .restaurant-card:nth-child(3n+1),
+    .restaurant-card:nth-child(3n+2),
+    .restaurant-card:nth-child(3n)   { transform: rotate(0); }
+}

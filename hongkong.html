@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hong Kong – Josie's Food Map</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="nav-brand">Josie's Food Map</a>
+            <ul class="nav-links">
+                <li><a href="hongkong.html" class="active" aria-current="page">Hong Kong</a></li>
+                <li><a href="paris.html">Paris</a></li>
+                <li><a href="newyork.html">New York</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <section class="city-hero">
+            <div class="city-hero-content">
+                <div class="city-hero-text">
+                    <h1 class="city-name">Hong Kong</h1>
+                    <p class="place-count" id="place-count">10 places in total</p>
+                    <a href="#restaurants" class="anchor-link">↓ View restaurants</a>
+                </div>
+                <figure class="city-hero-photo">
+                    <img
+                        src="images/foodhk.JPG"
+                        srcset="images/foodhk.JPG 1x, images/foodhk@2x.JPG 2x"
+                        width="550"
+                        height="344"
+                        alt="Food photo from Hong Kong">
+                </figure>
+            </div>
+        </section>
+
+        <section id="restaurants" class="city-content">
+
+            <aside class="filter-sidebar" aria-label="Filter restaurants by category">
+                <h2 class="filter-title">Filter</h2>
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="restaurant">Restaurant</button>
+                <button class="filter-btn" data-category="cafe">Cafe</button>
+                <button class="filter-btn" data-category="bakery">Bakery</button>
+                <button class="filter-btn" data-category="ice-cream">Ice Cream</button>
+                <button class="filter-btn" data-category="others">Others</button>
+            </aside>
+
+            <div class="cards-grid" id="cards-grid">
+
+                <article class="restaurant-card" data-category="cafe">
+                    <div class="card-header">
+                        <span class="card-cuisine">Specialty Coffee</span>
+                        <span class="card-rating" aria-label="5 out of 5 stars">★★★★★</span>
+                    </div>
+                    <h3 class="card-name">FINEPRINT</h3>
+                    <p class="card-dishes">Try: Signature Filter Coffee</p>
+                    <a href="https://www.google.com/maps/place/FINEPRINT/data=!4m2!3m1!1s0x3404012ac808187f:0xaf577b9323de7979"
+                       class="card-maps" target="_blank" rel="noopener noreferrer">See Maps →</a>
+                </article>
+
+                <article class="restaurant-card" data-category="bakery">
+                    <div class="card-header">
+                        <span class="card-cuisine">Bakery</span>
+                        <span class="card-rating" aria-label="5 out of 5 stars">★★★★★</span>
+                    </div>
+                    <h3 class="card-name">Vission Bakery</h3>
+                    <p class="card-dishes">Try: Milk Bread</p>
+                    <a href="https://www.google.com/maps/place/Vission+Bakery/data=!4m2!3m1!1s0x3404014dda17d187:0x924f300af7d0018"
+                       class="card-maps" target="_blank" rel="noopener noreferrer">See Maps →</a>
+                </article>
+
+                <article class="restaurant-card" data-category="cafe">
+                    <div class="card-header">
+                        <span class="card-cuisine">HK Style Café</span>
+                        <span class="card-rating" aria-label="4 out of 5 stars">★★★★☆</span>
+                    </div>
+                    <h3 class="card-name">Milk Cafe (Tsim Sha Tsui)</h3>
+                    <p class="card-dishes">Try: HK Milk Tea &amp; French Toast</p>
+                    <a href="https://www.google.com/maps/place/Milk+Cafe+(Tsim+Sha+Tsui)/data=!4m2!3m1!1s0x34040195a27bfd65:0x2d10527d2b6f0185"
+                       class="card-maps" target="_blank" rel="noopener noreferrer">See Maps →</a>
+                </article>
+
+                <article class="restaurant-card" data-category="cafe">
+                    <div class="card-header">
+                        <span class="card-cuisine">Japanese Coffee</span>
+                        <span class="card-rating" aria-label="5 out of 5 stars">★★★★★</span>
+                    </div>
+                    <h3 class="card-name">KOFFEE MAMEYA</h3>
+                    <p class="card-dishes">Try: Single Origin Pour-Over</p>
+                    <a href="https://www.google.com/maps/place/KOFFEE+MAMEYA/data=!4m2!3m1!1s0x3404012ec0c5ca1d:0xd633ed7f94092b0c"
+                       class="card-maps" target="_blank" rel="noopener noreferrer">See Maps →</a>
+                </article>
+
+                <article class="restaurant-card" data-category="ice-cream">
+                    <div class="card-header">
+                        <span class="card-cuisine">Gelato</span>
+                        <span class="card-rating" aria-label="5 out of 5 stars">★★★★★</span>
+                    </div>
+                    <h3 class="card-name">Snack Baby Gelato &amp; Drinks</h3>
+                    <p class="card-dishes">Try: Seasonal Gelato Flavors</p>
+                    <a href="https://www.google.com/maps/place/Snack+Baby+Gelato+%26+Drinks+(Hollywood+Road)/data=!4m2!3m1!1s0x3404010024e5c5f9:0x8365fdd8f00447b4"
+                       class="card-maps" target="_blank" rel="noopener noreferrer">See Maps →</a>
+                </article>
+
+                <article class="restaurant-card" data-category="ice-cream">
+                    <div class="card-header">
+                        <span class="card-cuisine">Choux &amp; Gelato</span>
+                        <span class="card-rating" aria-label="5 out of 5 stars">★★★★★</span>
+                    </div>
+                    <h3 class="card-name">Owl's Choux.Gelato.Coffee</h3>
+                    <p class="card-dishes">Try: Paris-Brest Choux</p>
+                    <a href="https://www.google.com/maps/place/Owl's+Choux.Gelato.Coffee/data=!4m2!3m1!1s0x340400ee1c532f33:0x11012520930d333a"
+                       class="card-maps" target="_blank" rel="noopener noreferrer">See Maps →</a>
+                </article>
+
+                <article class="restaurant-card" data-category="restaurant">
+                    <div class="card-header">
+                        <span class="card-cuisine">HK Noodles</span>
+                        <span class="card-rating" aria-label="4 out of 5 stars">★★★★☆</span>
+                    </div>
+                    <h3 class="card-name">Chee Kei</h3>
+                    <p class="card-dishes">Try: Wonton Noodle Soup</p>
+                    <a href="https://www.google.com/maps/place/Chee+Kei/data=!4m2!3m1!1s0x340400ed8fbc2f3d:0x8b661f7a72d221f2"
+                       class="card-maps" target="_blank" rel="noopener noreferrer">See Maps →</a>
+                </article>
+
+                <article class="restaurant-card" data-category="restaurant">
+                    <div class="card-header">
+                        <span class="card-cuisine">Japanese</span>
+                        <span class="card-rating" aria-label="5 out of 5 stars">★★★★★</span>
+                    </div>
+                    <h3 class="card-name">Kicho</h3>
+                    <p class="card-dishes">Try: Seasonal Omakase Kaiseki</p>
+                    <a href="https://www.google.com/maps/place/Kicho/data=!4m2!3m1!1s0x3404016daaa36505:0xb4cee1414362bde1"
+                       class="card-maps" target="_blank" rel="noopener noreferrer">See Maps →</a>
+                </article>
+
+                <article class="restaurant-card" data-category="restaurant">
+                    <div class="card-header">
+                        <span class="card-cuisine">Spanish Tapas</span>
+                        <span class="card-rating" aria-label="4 out of 5 stars">★★★★☆</span>
+                    </div>
+                    <h3 class="card-name">22 Ships</h3>
+                    <p class="card-dishes">Try: Pan con Tomate &amp; Jamón</p>
+                    <a href="https://www.google.com/maps/place/22+Ships/data=!4m2!3m1!1s0x3404005cd7c50eb7:0xe607c1e425161a1d"
+                       class="card-maps" target="_blank" rel="noopener noreferrer">See Maps →</a>
+                </article>
+
+                <article class="restaurant-card" data-category="others">
+                    <div class="card-header">
+                        <span class="card-cuisine">Japanese Mochi</span>
+                        <span class="card-rating" aria-label="5 out of 5 stars">★★★★★</span>
+                    </div>
+                    <h3 class="card-name">Just for mochi</h3>
+                    <p class="card-dishes">Try: Matcha pistachio mochi</p>
+                    <a href="https://www.google.com/maps/place/Just+for+mochi/data=!4m2!3m1!1s0x3404007b406e2fcd:0xa5058093e74099b7"
+                       class="card-maps" target="_blank" rel="noopener noreferrer">See Maps →</a>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Josie's Food Map &mdash; <a href="index.html" class="anchor-link">← Back to Home</a> &ensp;·&ensp; <a href="#main-content" class="anchor-link">↑ Back to top</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
